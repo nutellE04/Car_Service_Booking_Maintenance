@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File: app/src/main/res/values/colors.xml -->
+<resources>
+    <!-- We use a professional Blue/Teal theme for a corporate look -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App Specific Sleek Colors -->
+    <color name="primary_dark">#1A237E</color> <!-- Deep Indigo -->
+    <color name="primary_light">#534BAE</color>
+    <color name="accent_blue">#2979FF</color>
+    <color name="background_light">#F5F7FA</color> <!-- Soft grey-blue bg -->
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_primary">#102027</color>
+    <color name="text_secondary">#546E7A</color>
+    <color name="good_status">#00C853</color>
+    <color name="warning_status">#FFAB00</color>
+    <color name="danger_status">#D50000</color>
+</resources>

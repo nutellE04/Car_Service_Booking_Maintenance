@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File: app/src/main/res/layout/fragment_dashboard.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Garage"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_dark"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Main Status Card (Gradient) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_gradient_card"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle Healthy"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:alpha="0.9"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remaining Mileage"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:alpha="0.7"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvRemainingKm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4,250 km"
+                    android:textColor="@color/white"
+                    android:textSize="42sp"
+                    android:textStyle="bold"/>
+
+                <!-- Progress Bar (Starts full, decreases) -->
+                <ProgressBar
+                    android:id="@+id/progressBarService"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="16dp"
+                    android:progressTint="@color/white"
+                    android:progressBackgroundTint="#50FFFFFF"
+                    android:progress="100"
+                    android:max="100"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- NEW: Last Odometer Info Bar -->
+        <TextView
+            android:id="@+id/tvLastOdometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Odo: 0 km"
+            android:background="@drawable/bg_info_bar"
+            android:textColor="@color/primary_dark"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Actions -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpdateOdometer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Update Odometer"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="16dp"
+            app:icon="@drawable/ic_service_oil"
+            app:iconGravity="textStart"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabAddService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Service"
+            app:icon="@drawable/ic_service_oil"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

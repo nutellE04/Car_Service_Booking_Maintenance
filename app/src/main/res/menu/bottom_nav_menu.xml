@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File: app/src/main/res/menu/bottom_nav_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_service_oil"
+        android:title="Dashboard"/>
+
+    <item
+        android:id="@+id/nav_history"
+        android:title="History"
+        android:icon="@drawable/ic_history_clock"/>
+</menu>

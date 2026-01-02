@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File: app/src/main/res/drawable/bg_gradient_card.xml -->
+<!-- We use this for the main dashboard card to give it a premium feel -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#1A237E"
+        android:endColor="#2979FF"
+        android:angle="135"/>
+    <corners android:radius="16dp"/>
+</shape>

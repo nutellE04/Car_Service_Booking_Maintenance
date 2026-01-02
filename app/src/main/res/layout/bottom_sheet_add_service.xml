@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File: app/src/main/res/layout/bottom_sheet_add_service.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_gradient_card"
+    android:backgroundTint="@color/white">
+
+    <TextView
+        android:id="@+id/tvSheetTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Record Service"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_dark"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Service Type (e.g. Oil Change)"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etServiceType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Mileage (km)"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginEnd="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etServiceMileage"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Cost (RM)"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etServiceCost"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Notes (Optional)"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etServiceNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Save/Update Button -->
+    <!-- Explicitly set textColor to white to prevent it from disappearing -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveService"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Save Record"
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/primary_dark"/>
+
+    <!-- Delete Button (Hidden by default) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDeleteService"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Delete Record"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:textColor="@color/danger_status"
+        app:strokeColor="@color/danger_status"/>
+
+</LinearLayout>
